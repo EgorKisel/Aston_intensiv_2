@@ -4,51 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.aston_intensiv_2.RainbowDrumView
+    <com.example.aston_intensiv_2.presentation.custom_view.RainbowDrumView
         android:id="@+id/wheelView"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toTopOf="@id/arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sizeSeekBar" />
 
-    <com.example.aston_intensiv_2.ArrowView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/arrow"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/textField"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wheelView" />
 
-    <TextView
-        android:id="@+id/textField"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/imageField"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/arrow" />
-
-    <ImageView
-        android:id="@+id/imageField"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/spinButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textField" />
+        app:layout_constraintTop_toBottomOf="@id/arrow" />
 
     <Button
         android:id="@+id/spinButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_below="@id/imageField"
+        android:layout_below="@id/container"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
